@@ -2,6 +2,10 @@
   <img alt="OS.js Logo" src="https://raw.githubusercontent.com/os-js/gfx/master/logo-big.png" />
 </p>
 
+<center><h1>Not working</h1> </center>
+
+
+
 [OS.js](https://www.os-js.org/) is an [open-source](https://raw.githubusercontent.com/os-js/OS.js/master/LICENSE) desktop implementation for your browser with a fully-fledged window manager, Application APIs, GUI toolkits and filesystem abstraction.
 
 [![Support](https://img.shields.io/badge/patreon-support-orange.svg)](https://www.patreon.com/user?u=2978551&ty=h&u=2978551)
@@ -11,16 +15,16 @@
 [![Donate](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://paypal.me/andersevenrud)
 [![Community](https://img.shields.io/badge/join-community-green.svg)](https://community.os-js.org/)
 
-# OS.js v3 Example React Package
+# OS.js v3 Example Angular Package
 
-This is an application that uses React. Taken from the manual:
+This is an application that uses Angular. Taken from the manual:
 
 * https://manual.os-js.org/v3/guide/framework
 
 ## Installation
 
 ```bash
-npm install --save --production @osjs/example-react-application
+npm install --save --production @osjs/example-angular-application
 npm run package:discover
 ```
 
@@ -43,3 +47,8 @@ See the [Official Manuals](https://manual.os-js.org/v3/) for articles, tutorials
 * [Google+](https://plus.google.com/b/113399210633478618934/113399210633478618934)
 * [Facebook](https://www.facebook.com/os.js.org)
 * [Docker Hub](https://hub.docker.com/u/osjs/)
+
+
+
+### Notes
+lynda.com/Angular-tutorials/Migrating-from-React-Angular/625945-2.html
