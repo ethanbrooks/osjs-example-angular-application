@@ -1,9 +1,18 @@
-import './index.scss';
-import osjs from 'osjs';
-import {name as applicationName} from './metadata.json';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './src/App';
+import '../index.scss';
+
+//import osjs from 'osjs';
+import {name as applicationName} from '../metadata.json';
+
+import {enableProdMode} from '@angular/core';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+
+import {AppModule} from './app/app.module';
+import {environment} from './environments/environment';
+
+if (environment.production) {
+  enableProdMode();
+}
+
 
 // Our launcher
 const register = (core, args, options, metadata) => {
@@ -18,7 +27,12 @@ const register = (core, args, options, metadata) => {
     position: {left: 700, top: 200}
   })
     .on('destroy', () => proc.destroy())
-    .render($content => ReactDOM.render(React.createElement(App), $content));
+    .render($content => {
+      document.addEventListener('DOMContentLoaded', () => {
+        platformBrowserDynamic().bootstrapModule(AppModule);
+      });
+    });
+  //    .render($content => ReactDOM.render(React.createElement(App), $content));
 
   // Creates a new WebSocket connection (see server.js)
   const sock = proc.socket('/socket');
@@ -38,3 +52,4 @@ const register = (core, args, options, metadata) => {
 
 // Creates the internal callback function when OS.js launches an application
 osjs.register(applicationName, register);
+

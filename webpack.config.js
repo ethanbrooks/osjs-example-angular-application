@@ -17,7 +17,7 @@ if (mode === 'production') {
 module.exports = {
   mode,
   devtool: 'source-map',
-  entry: path.resolve(__dirname, 'index.js'),
+  entry: path.resolve(__dirname, 'index.ts'),
   externals: {
     osjs: 'OSjs'
   },
@@ -53,7 +53,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader'
